@@ -80,6 +80,7 @@ DeviceProcessEvents
 This threat hunt identified suspicious activity involving the creation and concealment of a hidden folder named secret_stuff within a user’s Documents directory, followed by the placement and execution of a PowerShell script inside that folder. The use of the attrib +h command to hide the folder combined with the execution of a script using powershell.exe with an execution policy bypass strongly suggests an attempt to evade standard detection and potentially execute malicious code. These behaviors align with known adversary techniques to hide payloads and run unauthorized scripts in Windows environments.
 
 The investigation leveraged Microsoft Defender for Endpoint telemetry and Kusto Query Language (KQL) queries to detect these indicators of compromise (IoCs). The findings emphasize the importance of monitoring hidden file system objects and unusual script executions originating from concealed locations as part of an effective security posture.
+
 ---
 
 ## Response Taken
